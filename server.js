@@ -28,7 +28,7 @@ app.use("/api", generatedPdfRoute);
 app.use("/api/pdf", deleteRoute);
 app.use("/api/user", logoutRoute);
 app.get("/", (req, res) => {
-    res.send("Welcome to PDF Sharing App");
+    res.send("Welcome Again to PDF Sharing App");
 })
 
 app.listen(PORT, () => {

@@ -24,11 +24,12 @@ export const allData = async (req, res) => {
     try {
         const pdf = await PDF.find({});
         const allPdf = pdf.map((doc) => {
-            return { allDocuments: { pdfId: doc?._id, id: doc?.id, name: doc.name, pdf: doc.pdf } }
-        })
+            return { pdfId: doc?._id, id: doc?.id, name: doc.name, pdf: doc.pdf };
+        });
         return res.status(200).json(allPdf);
     } catch (error) {
         res.status(500).send({ msg: "Internal server error" });
     }
-}
+};
+
 
